@@ -1,0 +1,39 @@
+package com.kancy.mybatisplus.generator.view.listener;
+
+/**
+ * <p>
+ * ActionCommonEnum
+ * <p>
+ *
+ * @author: kancy
+ * @date: 2020/6/9 17:19
+ **/
+
+public enum Command {
+    DEFAULT,
+    ADD_DATASOURCE,
+    DELETE_DATASOURCE,
+    UPDATE_DATASOURCE,
+    CONNECT_DATASOURCE,
+    SWITCH_DATABASE,
+    GLOBAL_CONFIG,
+    CODE_GENERATOR,
+    OPEN_CONSOLE,
+    CLEAR_GLOBAL_CACHE,
+    OPEN_TABLE,
+    SELECT_MODULE,
+    SYSTEM_RESET,
+    GET_CONSOLE_PASSWORD,
+    COPY_ENTITY_JSON,
+    COPY_ENTITY,
+    COPY_MAPPER_XML,
+    SAVE_AS_ENTITY,
+    SAVE_AS_MAPPER_XML,
+    EXPORT_TABLES_XMIND,
+    EXPORT_TABLES_DB_DOC,
+    EXPORT_DATABASE_XMIND,
+    EXPORT_DATABASE_DB_DOC,
+    SHARE,
+    EXCHANGE_GROUP,
+    ;
+}

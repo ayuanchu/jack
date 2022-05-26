@@ -1,0 +1,76 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.4" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 750, 450 )
+			"title": "控制台"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "hidemode 3"
+				"$columnConstraints": "[fill][fill][fill]"
+				"$rowConstraints": "[]"
+			} ) {
+				name: "panel_log"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea_console"
+					"editable": false
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+					name: "menuBar2"
+					add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+						name: "menu"
+						"text": "菜单"
+						add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+							name: "menu_set_log_level"
+							"text": "设置日志级别"
+							add( new FormComponent( "javax.swing.JRadioButtonMenuItem" ) {
+								name: "radioButtonMenuItem_log_level_debug"
+								"text": "debug"
+								"$buttonGroup": new FormReference( "buttonGroup_set_log_level" )
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "radioButtonMenuItem_log_level_debugActionPerformed", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JRadioButtonMenuItem" ) {
+								name: "radioButtonMenuItem_log_level_info"
+								"text": "info"
+								"$buttonGroup": new FormReference( "buttonGroup_set_log_level" )
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "radioButtonMenuItem_log_level_infoActionPerformed", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JRadioButtonMenuItem" ) {
+								name: "radioButtonMenuItem_log_level_warn"
+								"text": "warn"
+								"$buttonGroup": new FormReference( "buttonGroup_set_log_level" )
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "radioButtonMenuItem_log_level_warnActionPerformed", true ) )
+							} )
+							add( new FormComponent( "javax.swing.JRadioButtonMenuItem" ) {
+								name: "radioButtonMenuItem_log_level_error"
+								"text": "error"
+								"$buttonGroup": new FormReference( "buttonGroup_set_log_level" )
+								addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "radioButtonMenuItem_log_level_errorActionPerformed", true ) )
+							} )
+						} )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 555, 430 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup_set_log_level"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 446 )
+		} )
+	}
+}
