@@ -15,5 +15,4 @@ import java.util.List;
 @Data
 public class ControllerModel extends BaseModel {
     private List<String> autowires;
-    private String serviceName;
 }

@@ -1,0 +1,29 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.4" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "i18n"
+	"i18n.keyPrefix": "global.config.about.dialog"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": new FormMessage( null, "global.config.about.dialog.this.title" )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane_about"
+				add( new FormComponent( "javax.swing.JEditorPane" ) {
+					name: "editorPane_about"
+					"contentType": "text/html"
+					"text": "<html>\r   <head>\r \r   </head>\r   <body>\r     <p style=\"margin-top: 0\">\r       \r     </p>\r   </body>\r </html>\r "
+					"preferredSize": new java.awt.Dimension( 680, 450 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

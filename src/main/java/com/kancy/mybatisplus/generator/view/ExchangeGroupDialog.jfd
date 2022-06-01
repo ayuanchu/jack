@@ -1,0 +1,100 @@
+JFDML JFormDesigner: "7.0.2.0.298" Java: "11.0.3" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "i18n"
+	"i18n.keyPrefix": "ExchangeGroupDialog"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": new FormMessage( null, "ExchangeGroupDialog.this.title" )
+			"alwaysOnTop": true
+			"modal": true
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane2"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel_wx_me"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_wx_me"
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "ExchangeGroupDialog.panel_wx_me.tab.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel_wechat"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_wechat"
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "ExchangeGroupDialog.panel_wechat.tab.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel_qq"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_qq"
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "ExchangeGroupDialog.panel_qq.tab.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][240,fill]"
+					"$rowConstraints": "[][][225]"
+				} ) {
+					name: "panel_pay_support"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_pay_support_author"
+						"text": new FormMessage( null, "ExchangeGroupDialog.label_pay_support_author.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_pay_support_author_value"
+						"text": new FormMessage( null, "ExchangeGroupDialog.label_pay_support_author_value.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_pay_support_email"
+						"text": new FormMessage( null, "ExchangeGroupDialog.label_pay_support_email.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_pay_support_email"
+						"editable": false
+						"text": new FormMessage( null, "ExchangeGroupDialog.textField_pay_support_email.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1,growx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_pay_support"
+						"text": new FormMessage( null, "ExchangeGroupDialog.label_pay_support.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2,aligny top,growy 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_pay_support_image"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 2,align center center,grow 0 0"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "ExchangeGroupDialog.panel_pay_support.tab.title" )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 305, 370 )
+		} )
+	}
+}

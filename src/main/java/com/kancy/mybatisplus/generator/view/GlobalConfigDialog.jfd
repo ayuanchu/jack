@@ -1,0 +1,912 @@
+JFDML JFormDesigner: "7.0.2.0.298" Java: "11.0.3" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "i18n"
+	"i18n.keyPrefix": "global.config.dialog"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": new FormMessage( null, "global.config.dialog.this.title" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "hidemode 3"
+				"$columnConstraints": "[fill][26,fill][fill][fill][fill][fill][95,fill][99,fill]"
+				"$rowConstraints": "[][][][][][]"
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_author"
+					"text": new FormMessage( null, "global.config.dialog.label_author.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 1"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_author"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 1 6 1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_save"
+					"text": new FormMessage( null, "global.config.dialog.button_save.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_saveActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 7 1"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_description"
+					"text": new FormMessage( null, "global.config.dialog.label_description.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 2"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_description"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 2 6 1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_reset"
+					"text": new FormMessage( null, "global.config.dialog.button_reset.text" )
+					"toolTipText": "恢复到系统默认的配置"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_resetActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 7 2"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": new FormMessage( null, "global.config.dialog.label1.text" )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 3"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBox_project"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "comboBox_projectActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 3 2 1"
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox_overwrite"
+					"text": new FormMessage( null, "global.config.dialog.checkBox_overwrite.text" )
+					"toolTipText": new FormMessage( null, "global.config.dialog.checkBox_overwrite.toolTipText" )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 3 3"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_fun"
+					"text": new FormMessage( null, "global.config.dialog.label_fun.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 4"
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox_mapper"
+					"text": new FormMessage( null, "global.config.dialog.checkBox_mapper.text" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_mapperActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 4"
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox_mapper_xml"
+					"text": new FormMessage( null, "global.config.dialog.checkBox_mapper_xml.text" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_mapper_xmlActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 4"
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox_dao"
+					"text": new FormMessage( null, "global.config.dialog.checkBox_dao.text" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_daoActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 3 4"
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox_service"
+					"text": new FormMessage( null, "global.config.dialog.checkBox_service.text" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_serviceActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 4 4"
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "checkBox_controller"
+					"text": new FormMessage( null, "global.config.dialog.checkBox_controller.text" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_controllerActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 5 4"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "panel_guide"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_logo"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/images/icon.png" )
+						"horizontalAlignment": 0
+						"toolTipText": new FormMessage( null, "global.config.dialog.label_logo.toolTipText" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "label_logoMouseClicked", true ) )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_guide.tab.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][116,fill][32,fill][182,fill][fill][70,fill][43,fill][133,fill]"
+					"$rowConstraints": "[][5][310,top]"
+				} ) {
+					name: "panel_entity"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_entity_package"
+						"text": new FormMessage( null, "global.config.dialog.label_entity_package.text" )
+						"horizontalAlignment": 4
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_entity_package"
+						"text": "entity"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_entity_super_class"
+						"text": new FormMessage( null, "global.config.dialog.label_entity_super_class.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_entity_super_class"
+						"text": "com.baomidou.mybatisplus.extension.activerecord.Model"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 0"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_table_prefix"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_table_prefix.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_table_prefixActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 4 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_table_prefix"
+						"toolTipText": new FormMessage( null, "global.config.dialog.textField_table_prefix.toolTipText" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 5 0"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button_type_mapping"
+						"text": new FormMessage( null, "global.config.dialog.button_type_mapping.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_type_mappingActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 7 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_entity_template_type"
+						"text": new FormMessage( null, "global.config.dialog.label_entity_template_type.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_entity_template_type"
+						"model": &DefaultComboBoxModel0 new javax.swing.DefaultComboBoxModel {
+							selectedItem: "Beetl"
+							addElement( "Beetl" )
+							addElement( "Freemark" )
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_entity_edit_swith"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_entity_edit_swith.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_edit_swithActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_lombok"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_lombok.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_is_fill"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_is_fill.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 5 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_entity_key_strategy"
+						"text": new FormMessage( null, "global.config.dialog.label_entity_key_strategy.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 6 1,alignx right,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_entity_key_strategy"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 7 1"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane_entity"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea_entity"
+							"rows": 15
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2 8 1"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_entity.tab.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][116,fill][32,fill][189,fill][60,fill][93,fill][167,fill]"
+					"$rowConstraints": "[][5][310,top]"
+				} ) {
+					name: "panel_mapper"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_mapper_package"
+						"text": new FormMessage( null, "global.config.dialog.label_mapper_package.text" )
+						"horizontalAlignment": 4
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_mapper_package"
+						"text": "mapper"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_mapper_super_class"
+						"text": new FormMessage( null, "global.config.dialog.label_mapper_super_class.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_mapper_super_class"
+						"text": "com.baomidou.mybatisplus.core.mapper.BaseMapper"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 0 3 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_mapper_template_type"
+						"text": new FormMessage( null, "global.config.dialog.label_mapper_template_type.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_mapper_template_type"
+						"model": #DefaultComboBoxModel0
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_mapper_edit_swith"
+						"text": "使用自定义模板"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_mapper_edit_swithActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 1"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane_mapper"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea_mapper"
+							"rows": 15
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2 7 1"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_mapper.tab.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][116,fill][32,fill][261,fill][fill][81,fill][166,fill]"
+					"$rowConstraints": "[][5][310,top]"
+				} ) {
+					name: "panel_dao"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_dao_package"
+						"text": new FormMessage( null, "global.config.dialog.label_dao_package.text" )
+						"horizontalAlignment": 4
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_dao_package"
+						"text": "dao"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_dao_super_class"
+						"text": new FormMessage( null, "global.config.dialog.label_dao_super_class.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_dao_super_class"
+						"text": "com.baomidou.mybatisplus.extension.service.impl.ServiceImpl"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 0 3 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_dao_template_type"
+						"text": new FormMessage( null, "global.config.dialog.label_dao_template_type.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_dao_template_type"
+						"model": #DefaultComboBoxModel0
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_dao_edit_swith"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_dao_edit_swith.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_dao_edit_swithActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 1"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane_dao"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea_dao"
+							"rows": 15
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2 7 1"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_dao.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][131,fill][32,fill][261,fill][fill][fill][307,fill]"
+					"$rowConstraints": "[][5][310,top]"
+				} ) {
+					name: "panel_service"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_service_package"
+						"text": new FormMessage( null, "global.config.dialog.label_service_package.text" )
+						"horizontalAlignment": 4
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_service_package"
+						"text": "service"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_service_super_class"
+						"text": new FormMessage( null, "global.config.dialog.label_service_super_class.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_service_super_class"
+						"text": "java.lang.Object"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 0 3 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_service_template_type"
+						"text": new FormMessage( null, "global.config.dialog.label_service_template_type.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_service_template_type"
+						"model": #DefaultComboBoxModel0
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_service_edit_swith"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_service_edit_swith.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_service_edit_swithActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 1"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane_service"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea_service"
+							"rows": 15
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2 7 1"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_service.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][118,fill][32,fill][261,fill][fill][fill][279,fill]"
+					"$rowConstraints": "[][5][310,top]"
+				} ) {
+					name: "panel_service_impl"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_service_package_impl"
+						"text": new FormMessage( null, "global.config.dialog.label_service_package_impl.text" )
+						"horizontalAlignment": 4
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_service_package_impl"
+						"text": "service.impl"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_service_super_class_impl"
+						"text": new FormMessage( null, "global.config.dialog.label_service_super_class_impl.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_service_super_class_impl"
+						"text": "java.lang.Object"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 0 3 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_service_template_type_impl"
+						"text": new FormMessage( null, "global.config.dialog.label_service_template_type_impl.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_service_template_type_impl"
+						"model": #DefaultComboBoxModel0
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_service_edit_swith_impl"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_service_edit_swith_impl.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_service_edit_swith_implActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 1"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane_service_impl"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea_service_impl"
+							"rows": 15
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2 7 1"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_service_impl.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][122,fill][32,fill][261,fill][fill][fill][298,fill]"
+					"$rowConstraints": "[][5][310,top]"
+				} ) {
+					name: "panel_controller"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_controller_package"
+						"text": new FormMessage( null, "global.config.dialog.label_controller_package.text" )
+						"horizontalAlignment": 4
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_controller_package"
+						"text": "controller"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_controller_super_class"
+						"text": new FormMessage( null, "global.config.dialog.label_controller_super_class.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_controller_super_class"
+						"text": "java.lang.Object"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 0 3 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_controller_template_type"
+						"text": new FormMessage( null, "global.config.dialog.label_controller_template_type.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_controller_template_type"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "Freemark"
+							addElement( "Freemark" )
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_controller_edit_swith"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_controller_edit_swith.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_controller_edit_swithActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 1"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane_controller"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea_controller"
+							"rows": 15
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2 7 1"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_controller.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][118,fill][32,fill][261,fill][fill][fill][317,fill]"
+					"$rowConstraints": "[][5][310,top]"
+				} ) {
+					name: "panel_mapper_xml"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_mapper_xml_package"
+						"text": new FormMessage( null, "global.config.dialog.label_mapper_xml_package.text" )
+						"horizontalAlignment": 4
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_mapper_xml_package"
+						"text": "mapper"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_base_column"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_base_column.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_mapper_xml_template_type"
+						"text": new FormMessage( null, "global.config.dialog.label_mapper_xml_template_type.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_mapper_xml_template_type"
+						"model": #DefaultComboBoxModel0
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_mapper_xml_edit_swith"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_mapper_xml_edit_swith.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_mapper_xml_edit_swithActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 1"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane_mapper_xml"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea_mapper_xml"
+							"rows": 15
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2 7 1"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_mapper_xml.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][108,fill][44,fill][99,fill][80,fill][65,fill][38,fill][46,fill][163,fill]"
+					"$rowConstraints": "[][5][310,top]"
+				} ) {
+					name: "panel_maven"
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_maven_repo"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_maven_repo.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_maven_sfActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_maven_repo"
+						"text": new FormMessage( null, "global.config.dialog.textField_maven_repo.text" )
+						"editable": false
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_maven_overwrite_pom"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_maven_overwrite_pom.text" )
+						"toolTipText": new FormMessage( null, "global.config.dialog.checkBox_maven_overwrite_pom.toolTipText" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 6 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_maven_template_type"
+						"text": new FormMessage( null, "global.config.dialog.label_maven_template_type.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1,alignx right,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_maven_template_type"
+						"model": #DefaultComboBoxModel0
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_maven_edit_swith"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_maven_edit_swith.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_maven_edit_swithActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 1"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_maven_interceptor"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_maven_interceptor.text" )
+						"toolTipText": new FormMessage( null, "global.config.dialog.checkBox_maven_interceptor.toolTipText" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 6 1"
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane_maven"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea_maven"
+							"rows": 15
+						} )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2 9 1"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_maven.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][62,fill][fill][fill][76,fill][80,fill][64,fill][264,fill]"
+					"$rowConstraints": "[][][20][][][][][250,top]"
+				} ) {
+					name: "panel_spring_boot"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_config_type_name"
+						"text": new FormMessage( null, "global.config.dialog.label_config_type_name.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_spring_boot_config_file_type"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "yml"
+							addElement( "yml" )
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0,growx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_sb_jicheng"
+						"text": new FormMessage( null, "global.config.dialog.label_sb_jicheng.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2,alignx right,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_mica"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_mica.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 2"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_actuator"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_actuator.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 2"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_prometheus"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_prometheus.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 2"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_jasypt"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_jasypt.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 4 2"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_hakiri"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_hakiri.text" )
+						"$buttonGroup": new FormReference( "buttonGroup_sb_db_pool" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 3"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_druid"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_druid.text" )
+						"$buttonGroup": new FormReference( "buttonGroup_sb_db_pool" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 3"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_mongo"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_mongo.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 3"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_redis"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_redis.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 4 3"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_redis_lock"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_redis_lock.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 5 3"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_rabbitmq"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_rabbitmq.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_sb_rabbitmqActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 4"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_stream_rabbitmq"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_stream_rabbitmq.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_sb_stream_rabbitmqActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 4"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_kafka"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_kafka.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_sb_kafkaActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 4"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_stream_kafak"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_stream_kafak.text" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "checkBox_sb_stream_kafakActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 4 4"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_okhttp"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_okhttp.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 5"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_freemarker"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_freemarker.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 5"
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "checkBox_sb_docker"
+						"text": new FormMessage( null, "global.config.dialog.checkBox_sb_docker.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 6"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "global.config.dialog.panel_spring_boot.title" )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 830, 720 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup_sb_db_pool"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 736 )
+		} )
+	}
+}

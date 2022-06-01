@@ -1,0 +1,191 @@
+JFDML JFormDesigner: "7.0.2.0.298" Java: "11.0.3" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "i18n"
+	"i18n.keyPrefix": "main"
+	contentType: "form/swing"
+	root: new FormRoot {
+		auxiliary() {
+			"JavaCodeGenerator.i18nInitMethod": true
+		}
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": new FormMessage( null, "main.this.title" )
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/images/icon.png" )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "hidemode 3"
+				"$columnConstraints": "[fill][571,fill][fill][fill][30,fill]"
+				"$rowConstraints": "[]"
+			} ) {
+				name: "panel_ds"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_datasource"
+					"text": new FormMessage( null, "main.label_datasource.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 0"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "comboBox_datasource"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 0,dock center"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_connect"
+					"text": new FormMessage( null, "main.button_connect.text" )
+					"actionCommand": "connect_datasource"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_connectActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 0"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_add_ds"
+					"actionCommand": "add_datasource"
+					"text": new FormMessage( null, "main.button_add_ds.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_add_dsActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 3 0"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_popup_menu"
+					"text": new FormMessage( null, "main.button_popup_menu.text_2" )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 4 0"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "panel_main"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][725,fill]"
+					"$rowConstraints": "[]"
+				} ) {
+					name: "panel_db_select"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_database"
+						"text": new FormMessage( null, "main.label_database.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_database"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "vmc"
+							addElement( "vmc" )
+							addElement( "vccx" )
+						}
+						"actionCommand": "switch_database"
+						"minimumSize": new java.awt.Dimension( 55, 27 )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "comboBox_databaseActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0,dock center"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "North"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane_db_tables"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "table_db_tables"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector, new java.util.Vector, new java.util.Vector, new java.util.Vector )
+						"preferredScrollableViewportSize": new java.awt.Dimension( 450, 350 )
+						"toolTipText": new FormMessage( null, "main.table_db_tables.toolTipText" )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "table_db_tablesMouseClicked", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][680,fill][fill]"
+					"$rowConstraints": "[][][]"
+				} ) {
+					name: "panel_config"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_module"
+						"text": new FormMessage( null, "main.label_module.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "label_moduleMouseClicked", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_module"
+						"editable": true
+						"toolTipText": new FormMessage( null, "main.comboBox_module.toolTipText" )
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "comboBox_moduleItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0,dock center"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button_global_config"
+						"text": new FormMessage( null, "main.button_global_config.text" )
+						"actionCommand": "global_config"
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_configActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 0"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_package"
+						"text": new FormMessage( null, "main.label_package.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_package"
+						"editable": true
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "com.kancy.data"
+							addElement( "com.kancy.data" )
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1,dock center"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button_generator"
+						"text": new FormMessage( null, "main.button_generator.text" )
+						"actionCommand": "code_generator"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_generatorActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 2 1"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 730, 560 )
+		} )
+	}
+}

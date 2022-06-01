@@ -1,0 +1,252 @@
+JFDML JFormDesigner: "7.0.2.0.298" Java: "11.0.3" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "i18n"
+	"i18n.keyPrefix": "datasource.dialog"
+	contentType: "form/swing"
+	root: new FormRoot {
+		auxiliary() {
+			"JavaCodeGenerator.i18nInitMethod": true
+		}
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": new FormMessage( null, "datasource.dialog.this.title" )
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "hidemode 3"
+				"$columnConstraints": "[fill][374,fill][fill]"
+				"$rowConstraints": "[][]"
+			} ) {
+				name: "panel_ds_head"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_ds_name"
+					"text": new FormMessage( null, "datasource.dialog.label_ds_name.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 0"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_ds_name"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 0"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_ds_test_connect"
+					"text": new FormMessage( null, "datasource.dialog.button_ds_test_connect.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_ds_test_connectActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 0"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_ds_remark"
+					"text": new FormMessage( null, "datasource.dialog.label_ds_remark.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 1"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_ds_remark"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 1"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_ds_save"
+					"text": new FormMessage( null, "datasource.dialog.button_ds_save.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_ds_saveActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 1"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][185,fill][27,fill][52,fill][181,fill]"
+					"$rowConstraints": "[][][32][][][]"
+				} ) {
+					name: "panel_ds_config2"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_driver2"
+						"text": new FormMessage( null, "datasource.dialog.label_driver2.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1,alignx right,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_driver2"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "comboBox_driver2ActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1 4 1"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_jdbc_url2"
+						"text": new FormMessage( null, "datasource.dialog.label_jdbc_url2.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2,alignx right,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_host"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 2,growx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_port"
+						"text": new FormMessage( null, "datasource.dialog.label_port.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 2,alignx trailing,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_port"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 4 2,growx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_user_name2"
+						"text": new FormMessage( null, "datasource.dialog.label_user_name2.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 3,alignx right,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_user_name2"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 3"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_password2"
+						"text": new FormMessage( null, "datasource.dialog.label_password2.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 3 3,alignx trailing,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JPasswordField" ) {
+						name: "passwordField_password2"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 4 3"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_database_name"
+						"text": new FormMessage( null, "datasource.dialog.label_database_name.text" )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 4"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_database_name"
+						"editable": true
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 4"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "datasource.dialog.panel_ds_config2.title" )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "hidemode 3"
+					"$columnConstraints": "[fill][448,fill]"
+					"$rowConstraints": "[][][32][][][]"
+				} ) {
+					name: "panel_ds_config"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_driver"
+						"text": new FormMessage( null, "datasource.dialog.label_driver.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 1,alignx right,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox_driver"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "comboBox_driverActionPerformed", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 1,growx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_jdbc_url"
+						"text": new FormMessage( null, "datasource.dialog.label_jdbc_url.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 2,align right top,grow 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "textArea_jdbc_url"
+						"lineWrap": true
+						"border": new javax.swing.border.TitledBorder( "jdbcurl" )
+						"toolTipText": new FormMessage( null, "datasource.dialog.textArea_jdbc_url.toolTipText" )
+						"minimumSize": new java.awt.Dimension( 385, 70 )
+						"rows": 2
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 2,growx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_user_name"
+						"text": new FormMessage( null, "datasource.dialog.label_user_name.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 3,alignx right,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_user_name"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 3,growx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_password"
+						"text": new FormMessage( null, "datasource.dialog.label_password.text" )
+						auxiliary() {
+							"JavaCodeGenerator.variableLocal": true
+						}
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 4,alignx right,growx 0"
+					} )
+					add( new FormComponent( "javax.swing.JPasswordField" ) {
+						name: "passwordField_password"
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 4,growx"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": new FormMessage( null, "datasource.dialog.panel_ds_config.tab.title" )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 550, 380 )
+		} )
+	}
+}

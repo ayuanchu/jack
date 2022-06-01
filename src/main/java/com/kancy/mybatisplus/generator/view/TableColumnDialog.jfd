@@ -1,0 +1,90 @@
+JFDML JFormDesigner: "7.0.2.0.298" Java: "11.0.3" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "i18n"
+	"i18n.keyPrefix": "table.dialog"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": new FormMessage( null, "table.dialog.this.title" )
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "hidemode 3"
+				"$columnConstraints": "[fill][265,fill][36,fill][265,fill][fill][48,fill]"
+				"$rowConstraints": "[]"
+			} ) {
+				name: "panel"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_entity_name"
+					"text": new FormMessage( null, "table.dialog.label_entity_name.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 0,alignx right,growx 0"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_entity_name"
+					"editable": false
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 0"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label_table_remark"
+					"text": new FormMessage( null, "table.dialog.label_table_remark.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 0"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField_table_remark"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 3 0,dock center"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_clear_cache"
+					"text": new FormMessage( null, "table.dialog.button_clear_cache.text" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_clear_cacheActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 4 0"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button_ok"
+					"text": new FormMessage( null, "table.dialog.button_ok.text" )
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button_okActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 5 0,aligny center,grow 100 0"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector, new java.util.Vector, new java.util.Vector, new java.util.Vector )
+					"preferredScrollableViewportSize": new java.awt.Dimension( 450, 300 )
+					"toolTipText": new FormMessage( null, "table.dialog.table.toolTipText" )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 680, 350 )
+		} )
+	}
+}

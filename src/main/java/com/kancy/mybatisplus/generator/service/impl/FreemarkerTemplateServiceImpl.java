@@ -1,7 +1,6 @@
 package com.kancy.mybatisplus.generator.service.impl;
 
 import com.kancy.mybatisplus.generator.config.Settings;
-import com.kancy.mybatisplus.generator.core.model.ControllerModel;
 import com.kancy.mybatisplus.generator.exception.TemplateException;
 import com.kancy.mybatisplus.generator.service.TemplateService;
 import freemarker.template.Configuration;
@@ -49,11 +48,6 @@ public class FreemarkerTemplateServiceImpl implements TemplateService {
     public Optional<String> render(String templatePath, Map<String, Object> templateData) {
         StringWriter result = null;
         try {
-            Object ss = templateData.get("controller");
-            if(ss instanceof ControllerModel){
-                String[] res = ((ControllerModel) ss).getAutowires().get(0).replace(";","").split(" ");
-                ((ControllerModel) ss).setServiceName(res[3]);
-            }
             Template template = getConfiguration().getTemplate(templatePath);
             result = new StringWriter();
             template.process(templateData, result);
